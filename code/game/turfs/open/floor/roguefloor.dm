@@ -794,11 +794,28 @@
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	landsound = 'sound/foley/jumpland/stoneland.wav'
 	neighborlay = "cobblerock"
-	smooth = SMOOTH_TRUE
+	smooth = SMOOTH_MORE
 	canSmoothWith = list(/turf/open/floor/rogue/dirt, /turf/open/floor/rogue/grass)
+
+/turf/open/floor/blackstone/cobblestone/Initialize()
+	. = ..()
+	dir = pick(GLOB.cardinals)
 
 /turf/open/floor/blackstone/rock/cobblestone/moss
 	icon_state = "cobblestone_moss"
 
 /turf/open/floor/blackstone/rock/cobblestone/grass
 	icon_state = "cobblestone_grass"
+
+/turf/open/floor/rogue/grass
+	name = "grass"
+	desc = "Grass, sodden with mud and bogwater." 
+	icon_state = "grass"
+	layer = MID_TURF_LAYER
+	footstep = FOOTSTEP_GRASS
+	barefootstep = FOOTSTEP_SOFT_BAREFOOT
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	tiled_dirt = FALSE
+	landsound = 'sound/foley/jumpland/grassland.wav'
+	slowdown = 0
+	neighborlay = "grassedge"
