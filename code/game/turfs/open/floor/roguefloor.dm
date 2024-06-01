@@ -764,3 +764,47 @@
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
 	landsound = 'sound/foley/jumpland/grassland.wav'
+
+// wirpy floors
+/turf/open/floor/blackstone/
+	desc = ""
+	canSmoothWith = null
+	smooth = SMOOTH_FALSE
+	var/smooth_icon = null
+	var/prettifyturf = FALSE
+	icon = ''
+	baseturfs = list(/turf/open/transparent/openspace)
+	neighborlay = ""
+
+/turf/open/floor/blackstone/rock
+	desc = ""
+	canSmoothWith = null
+	smooth = SMOOTH_FALSE
+	var/smooth_icon = null
+	var/prettifyturf = FALSE
+	icon = 'icons/blackstone/turf/floors/rock_floors.dmi'
+	baseturfs = list(/turf/open/transparent/openspace)
+	neighborlay = ""
+
+/turf/open/floor/blackstone/rock/cobblestone
+	icon_state = "cobblestone"
+	footstep = FOOTSTEP_STONE
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	landsound = 'sound/foley/jumpland/stoneland.wav'
+	neighborlay = "cobblerock"
+	smooth = SMOOTH_TRUE
+	canSmoothWith = list(/turf/open/floor/rogue/dirt, /turf/open/floor/rogue/grass)
+
+/turf/open/floor/blackstone/rock/cobblestone
+	icon_state = "cobblestone_moss"
+	footstep = FOOTSTEP_STONE
+	barefootstep = FOOTSTEP_HARD_BAREFOOT
+	clawfootstep = FOOTSTEP_HARD_CLAW
+	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
+	landsound = 'sound/foley/jumpland/stoneland.wav'
+	neighborlay = "cobblerock"
+	smooth = SMOOTH_TRUE
+	canSmoothWith = list(/turf/open/floor/rogue/dirt, /turf/open/floor/rogue/grass)
+
